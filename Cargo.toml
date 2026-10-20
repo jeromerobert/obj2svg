@@ -1,0 +1,30 @@
+[package]
+name = "obj2svg"
+version = "0.1.0"
+edition = "2024"
+description = "Converts OBJ line elements into connected SVG polylines"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/username/obj2svg"
+readme = "README.md"
+keywords = ["obj", "svg", "converter"]
+categories = ["graphics", "command-line-utilities"]
+
+[dependencies]
+clap = { version = "4.6", features = ["derive"] }
+svg = "0.18"
+tobj = "4.0"
+
+[lints.rust]
+unused = "warn"
+warnings = "warn"
+unused_qualifications = "warn"
+nonstandard_style = "warn"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+nursery = { level = "warn", priority = -1 }
+cargo = { level = "warn", priority = -1 }
+redundant_type_annotations = "warn"
+cast_possible_truncation = "allow"
+multiple_crate_versions = "allow"
